@@ -1,15 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://ck2hj6okj0vk1"]
+[gd_scene load_steps=6 format=3 uid="uid://ck2hj6okj0vk1"]
 
 [ext_resource type="Script" uid="uid://bm5edy5ycu26d" path="res://level.gd" id="1_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://kbl3rn248ux1" path="res://player.tscn" id="1_u52ul"]
 [ext_resource type="PackedScene" uid="uid://wrs4yaevanpk" path="res://block.tscn" id="2_vonw3"]
 [ext_resource type="PackedScene" uid="uid://bh8at2igie2av" path="res://kill_zone.tscn" id="4_f2txt"]
+[ext_resource type="PackedScene" uid="uid://bxqqdhut3q0ch" path="res://spike.tscn" id="5_f2txt"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_0b4ue")
 
 [node name="Player" parent="." instance=ExtResource("1_u52ul")]
-position = Vector2(584, 192)
+position = Vector2(512, 192)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
@@ -23,33 +24,63 @@ position = Vector2(792, 384)
 position = Vector2(920, 384)
 
 [node name="Block5" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(1152, 344)
+position = Vector2(1152, 320)
 
 [node name="Block6" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(1336, 472)
+position = Vector2(1472, 512)
 
 [node name="Block7" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(1560, 576)
+position = Vector2(424, 384)
 
 [node name="Block8" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(1816, 552)
+position = Vector2(1856, 512)
 
 [node name="Block9" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(1944, 552)
+position = Vector2(1984, 512)
 
 [node name="Block10" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(2072, 552)
+position = Vector2(2112, 512)
 
 [node name="Block11" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(2264, 512)
+position = Vector2(2368, 512)
+
+[node name="Block13" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(3264, 384)
+
+[node name="Block16" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(3520, 448)
+
+[node name="Block17" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(3648, 448)
+
+[node name="Block18" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(3976, 448)
+
+[node name="Block19" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(4104, 448)
+
+[node name="Block20" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(4800, 320)
+
+[node name="Block21" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(4480, 384)
 
 [node name="Block12" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(2488, 512)
+position = Vector2(2608, 512)
+
+[node name="Block14" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(3008, 448)
+
+[node name="Block15" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(2736, 512)
 
 [node name="Block3" parent="." instance=ExtResource("2_vonw3")]
 position = Vector2(552, 384)
 
 [node name="KillZone" parent="." instance=ExtResource("4_f2txt")]
-position = Vector2(496, 224)
+position = Vector2(416, 224)
+
+[node name="Spike" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(2536, 216)
 
 [connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]
