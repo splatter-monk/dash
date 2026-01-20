@@ -10,6 +10,12 @@ const JUMP_VELOCITY = -470.0
 
 var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\") * 1.5
 
+var start_position: Vector2 # Use Vector3 for 3D=
+
+func _ready() -> void:
+	start_position = global_position
+	
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -31,7 +37,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func explode():
-	queue_free()
+	global_position = start_position
+	#queue_free()
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
