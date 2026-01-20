@@ -13,6 +13,7 @@ script = ExtResource("1_0b4ue")
 position = Vector2(512, 192)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(100, 100)
 
 [node name="Block" parent="." instance=ExtResource("2_vonw3")]
 position = Vector2(672, 384)
@@ -42,6 +43,9 @@ position = Vector2(1984, 512)
 position = Vector2(2112, 512)
 
 [node name="Block11" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(2240, 512)
+
+[node name="Block22" parent="." instance=ExtResource("2_vonw3")]
 position = Vector2(2368, 512)
 
 [node name="Block13" parent="." instance=ExtResource("2_vonw3")]
@@ -54,25 +58,49 @@ position = Vector2(3520, 448)
 position = Vector2(3648, 448)
 
 [node name="Block18" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(3976, 448)
+position = Vector2(4008, 448)
 
 [node name="Block19" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(4104, 448)
+position = Vector2(4136, 448)
 
 [node name="Block20" parent="." instance=ExtResource("2_vonw3")]
 position = Vector2(4800, 320)
+
+[node name="Block23" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(5248, 384)
+
+[node name="Block24" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(5376, 384)
+
+[node name="Block25" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(5504, 384)
+
+[node name="Block26" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(5832, 384)
+
+[node name="Block27" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(6144, 704)
+
+[node name="Block28" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(6144, 320)
+
+[node name="Block29" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(6272, 704)
+
+[node name="Block30" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(6272, 320)
 
 [node name="Block21" parent="." instance=ExtResource("2_vonw3")]
 position = Vector2(4480, 384)
 
 [node name="Block12" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(2608, 512)
+position = Vector2(2496, 512)
 
 [node name="Block14" parent="." instance=ExtResource("2_vonw3")]
 position = Vector2(3008, 448)
 
 [node name="Block15" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(2736, 512)
+position = Vector2(2624, 512)
 
 [node name="Block3" parent="." instance=ExtResource("2_vonw3")]
 position = Vector2(552, 384)
@@ -81,6 +109,51 @@ position = Vector2(552, 384)
 position = Vector2(416, 224)
 
 [node name="Spike" parent="." instance=ExtResource("5_f2txt")]
-position = Vector2(2536, 216)
+position = Vector2(2504, 184)
+
+[node name="Spike4" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(1864, 312)
+
+[node name="Spike5" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(2904, 312)
+
+[node name="Spike6" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(3024, 248)
+
+[node name="Spike7" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(3280, 312)
+
+[node name="Spike8" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(3536, 240)
+
+[node name="Spike9" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(4032, 248)
+
+[node name="Spike10" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(4440, 248)
+
+[node name="Spike11" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(4792, 176)
+
+[node name="Spike12" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(5072, 128)
+
+[node name="Spike13" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(5392, 312)
+
+[node name="Spike14" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(5504, 312)
+
+[node name="Spike15" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(5616, 312)
+
+[node name="Spike16" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(6288, 376)
+
+[node name="Spike2" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(1744, 312)
+
+[node name="Spike3" parent="." instance=ExtResource("5_f2txt")]
+position = Vector2(1744, 312)
 
 [connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]
