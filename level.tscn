@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ck2hj6okj0vk1"]
+[gd_scene load_steps=8 format=3 uid="uid://ck2hj6okj0vk1"]
 
 [ext_resource type="Script" uid="uid://bm5edy5ycu26d" path="res://level.gd" id="1_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://kbl3rn248ux1" path="res://player.tscn" id="1_u52ul"]
 [ext_resource type="PackedScene" uid="uid://wrs4yaevanpk" path="res://block.tscn" id="2_vonw3"]
+[ext_resource type="PackedScene" uid="uid://ddyuecf02v2mi" path="res://bottom.tscn" id="3_n6hdu"]
 [ext_resource type="PackedScene" uid="uid://bh8at2igie2av" path="res://kill_zone.tscn" id="4_f2txt"]
+[ext_resource type="Script" uid="uid://dcdps77a7uq2s" path="res://bottom.gd" id="4_km5ld"]
 [ext_resource type="PackedScene" uid="uid://bxqqdhut3q0ch" path="res://spike.tscn" id="5_f2txt"]
 
 [node name="Level" type="Node2D"]
@@ -14,6 +16,10 @@ position = Vector2(512, 192)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2(100, 100)
+
+[node name="Node2D" parent="Player" instance=ExtResource("3_n6hdu")]
+position = Vector2(2920, 1256)
+script = ExtResource("4_km5ld")
 
 [node name="Block" parent="." instance=ExtResource("2_vonw3")]
 position = Vector2(672, 384)
